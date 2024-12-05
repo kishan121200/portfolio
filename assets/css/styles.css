@@ -211,8 +211,12 @@ img {
   fill: var(--first-color);
 }
 .home__blob-img {
-  width: 360px;
+    object-fit: cover; /* Ensures the image fills the shape proportionally */
+    object-position: center; /* Centers the image within the shape */
+    width: 100%; /* Scales the image width to fit the container */
+    height: 100%; /* Scales the image height to fit the container */
 }
+
 .home__img {
   position: absolute;
   right: 0;
@@ -247,7 +251,6 @@ img {
   justify-self: center;
 }
 .about__img img {
-  width: 200px;
   border-radius: 0.5rem;
 }
 
@@ -530,7 +533,7 @@ textarea {
 .footer__social {
   margin-bottom: var(--mb-4);
 }
-.footer__icon {x
+.footer__icon {
   font-size: 1.5rem;
   color: #fff;
   margin: 0 var(--mb-2);
@@ -632,7 +635,7 @@ textarea {
     padding-top: 2rem;
   }
   .about__img img {
-    width: 300px;
+    width: 400px;
   }
   .skills__container {
     grid-template-columns: repeat(3, 1fr);
